@@ -1,0 +1,26 @@
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class PetRockTest {
+    private PetRock rocky = new PetRock("Rocky");
+
+    @Test
+    public void getName() {
+        PetRock rocky = new PetRock("Rocky");
+        assertEquals("Rocky", rocky.getName());
+    }
+
+    @Test
+    public void testHappy(){
+        //PetRock rocky = new PetRock("Rocky");
+        assertFalse(rocky.isHappy()); // no happy method. compiles its is valid failure.
+    }
+
+    @Test
+    public void testHappyAfterPlay(){
+        rocky.playWithRock();
+        assertTrue(rocky.isHappy());
+    }
+}
